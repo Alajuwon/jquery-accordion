@@ -1,0 +1,29 @@
+.accordion{
+	width: 460px;
+	margin: 50px auto;
+}
+
+
+
+.tab{
+	border:solid;
+	margin:0px;
+
+}
+
+.box-label{
+	border:solid;
+	padding: 15px;
+	height:0px;
+	overflow: hidden;
+	transition: height .5s ease;
+}
+
+h2{
+	border:dotted;
+	text-align:center;
+
+}
+
+
+
