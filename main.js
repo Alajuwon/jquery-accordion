@@ -1,49 +1,75 @@
 
-var dropDown = function(event){
-	if ("acd" === event.target.id){
 
-		$("#box-1").height(150);
-		$("#box-2").height(0);
-		$("#box-3").height(0);
-	}
 
 	
+ var dropDown = function(event){
 
-	if ("acd2" === event.target.id){
+ // made a varialble for each box and set them all to false(closed).	
 
-		$("#box-1").height(0);
-		$("#box-2").height(120);
-		$("#box-3").height(0);
-	}
+ 				var toggleBox1 = false;
+ 				var toggleBox2 = false;
+ 				var toggleBox3 = false;
+
+ 	console.log("function works");
+
+// "if" statement saying if box-1 is clicked, toggle open(true) 
+	
+	if (event.target.id === "acd"){
+		if (toggleBox1 !== true) {
+			$("#box-1").toggleClass("open");
+			toggleBox1 = true;
+		}
+		if (toggleBox2 !== false) {
+			$("#box-2").toggleClass("open");
+			toggleBox1 = false;
+		}
+		if (toggleBox3 !== false) {
+			$("#box-3").toggleClass("open");
+			toggleBox1 = false;
+		}
+	};
+		
+// "if" statement saying if box-2 is clicked, toggle open(true) 
+	
+	
+	if (event.target.id === "acd2"){
+		if (toggleBox1 !== false) {
+			$("#box-1").toggleClass("open");
+			toggleBox1 = false;
+		}
+		if (toggleBox2 !== true) {
+			$("#box-2").toggleClass("open");
+			toggleBox1 = true;
+		}
+		if (toggleBox3 !== false) {
+			$("#box-3").toggleClass("open");
+			toggleBox1 = false;
+		}
+
+	};
+	
+// "if" statement saying if box-3 is clicked, toggle open(true) 
 	
 
-	if("acd3"=== event.target.id){
 
-		$("#box1").height(0);
-		$("#box-2").height(0);
-		$("#box-3").height(60);
-	}
+	if(event.target.id === "acd3"){
 
+		if (toggleBox1 != false) {
+			$("#box-1").toggleClass("open");
+			toggleBox1 = false;
+		}
+		if (toggleBox2 != false) {
+			$("#box-2").toggleClass("open");
+			toggleBox1 = false;
+		}
+		
+		if (toggleBox3 != true) {
+			$("#box-3").toggleClass("open");
+			toggleBox1 = true;
+		}
+
+	};
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(".tab").click(dropDown);
+	$(".tab").click(dropDown);
